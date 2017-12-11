@@ -8,5 +8,5 @@ services:
   - docker
 
 before_install:
-  - docker login
-  - gonzaloaguilar
+  - docker tag solucion-back gonzaloaguilar/practica2
+  - docker push gonzaloaguilar/practica2
