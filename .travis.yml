@@ -8,5 +8,6 @@ services:
   - docker
 
 before_install:
-  - docker tag solucion-back gonzaloaguilar/practica2
-  - docker push gonzaloaguilar/practica2
+  - docker login -u "pruebagonzalourjc" -p "aguilar"
+  - docker tag solucion-back pruebagonzalourjc/practica2
+  - docker push pruebagonzalourjc/practica2
