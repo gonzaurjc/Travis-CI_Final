@@ -6,8 +6,7 @@ script: mvn clean install verify package compile test
 
 env:
   global:
-    # travis encrypt DOCKER_USERNAME=pruebagonzalourjc
-    # travis encrypt DOCKER_PASSWORD=aguilar
+    - DOCKER_USERNAME=pruebagonzalourjc DOCKER_PASSWORD=aguilar
     
     
     
