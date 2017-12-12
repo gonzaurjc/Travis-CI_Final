@@ -5,8 +5,9 @@ install: true
 script: mvn clean install verify package compile test
 
 env:
-  - DOCKER_USERNAME=pruebagonzalourjc
-  - DOCKER_PASSWORD=aguilar
+  global:
+    - DOCKER_USERNAME=pruebagonzalourjc
+    - DOCKER_PASSWORD=aguilar
 
 services:
   - docker
