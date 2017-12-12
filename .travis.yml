@@ -9,12 +9,14 @@ env:
 
 addons:
   sonarcloud:
-    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    organization: "sonarcloud_organization_key"
     token:
-      secure: 8267438bd0c8bbc7204d6e1cefc7aee492824d72  # encrypted value of your token
+      secure: 8267438bd0c8bbc7204d6e1cefc7aee492824d72
+    branches:
+      - master
+      - maintenance
 script:
-  # other script steps might be done before running the actual analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - sonar-scanner
     
 services:
   - docker
