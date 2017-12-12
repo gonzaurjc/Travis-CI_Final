@@ -7,17 +7,7 @@ script: mvn clean install verify package compile test sonar:sonar
 env:
   - DOCKER_USERNAME=pruebagonzalourjc DOCKER_PASSWORD=aguilar
 
-#addons:
-#  sonarcloud:
-#    organization: "sonarcloud_organization_key"
-#    token:
-#      secure: 8267438bd0c8bbc7204d6e1cefc7aee492824d72
-#    branches:
-#      - master
-#      - maintenance
-#script:
-#  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization={ORG_KEY} -Dsonar.login={8267438bd0c8bbc7204d6e1cefc7aee492824d72} -Dsonar.branch={BRANCH_NAME}
-    
+
 services:
   - docker
 
