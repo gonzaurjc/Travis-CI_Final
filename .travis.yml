@@ -13,7 +13,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t practicaDocker .
+  - docker build -t practicadocker .
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker tag practicaDocker pruebagonzalourjc/practica2
+  - docker tag practicadocker pruebagonzalourjc/practica2
   - docker push pruebagonzalourjc/practica2
