@@ -6,7 +6,15 @@ script: mvn clean install verify package compile test sonar:sonar
 
 env:
   - DOCKER_USERNAME=pruebagonzalourjc DOCKER_PASSWORD=aguilar
-    
+
+addons:
+  sonarcloud:
+    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    token:
+      secure: 8267438bd0c8bbc7204d6e1cefc7aee492824d72  # encrypted value of your token
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
     
 services:
   - docker
