@@ -6,9 +6,9 @@ script: mvn clean install verify package compile test
 
 env:
   global:
-    - DOCKER_USERNAME=pruebagonzalourjc
-    - DOCKER_PASSWORD=aguilar
-
+    # travis encrypt DOCKER_USERNAME=pruebagonzalourjc
+    # travis encrypt DOCKER_PASSWORD=aguilar
+    
 services:
   - docker
 
