@@ -4,6 +4,7 @@ jdk: oraclejdk8
 install: true
 script: mvn clean install verify package compile test
 
+travis encrypt DOCKER_PASSWORD="aguilar"
 env:
   - DOCKER_USERNAME=pruebagonzalourjc DOCKER_PASSWORD=aguilar
 
